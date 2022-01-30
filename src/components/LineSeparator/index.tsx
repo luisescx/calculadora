@@ -2,7 +2,7 @@ import React from 'react';
 
 import {Separator} from './styles';
 
-const LineSeparator = () => {
+const LineSeparator: React.FC = () => {
   return <Separator />;
 };
 
