@@ -8,8 +8,6 @@ interface Props {
 }
 
 export const Container = styled(TouchableOpacity)<Props>`
-  max-height: 56px;
-  min-height: 56px;
   width: ${({doubleWidth}) => (doubleWidth ? 50 : 25)}%;
   justify-content: center;
   align-items: center;
