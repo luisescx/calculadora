@@ -4,10 +4,16 @@ import theme from '../../theme';
 
 import {Container} from './styles';
 
-const Display = () => {
+interface Props {
+  calculation: string;
+  result: number;
+}
+
+const Display: React.FC<Props> = ({calculation, result}) => {
   return (
     <Container style={{alignItems: 'center', justifyContent: 'center'}}>
-      <Text style={{color: theme.COLORS.TEXT}}>Mostrar Calculos</Text>
+      <Text style={{color: theme.COLORS.TEXT}}>{calculation}</Text>
+      <Text style={{color: theme.COLORS.TEXT}}>{result}</Text>
     </Container>
   );
 };

@@ -5,26 +5,32 @@ import theme from '../../theme';
 import {Container, Title} from './styles';
 
 interface Props extends TouchableOpacityProps {
-  label?: string;
   type: 'numberButton' | 'calcButton' | 'topButton';
+  buttonPressed: (buttonValue: string) => void;
+  label: string;
   doubleWidth?: boolean;
   isBorderRight?: boolean;
 }
 
 const Button: React.FC<Props> = ({
-  label,
   type,
+  buttonPressed,
+  label,
   doubleWidth,
   isBorderRight = true,
   ...rest
 }) => {
+  const handleButton = () => {
+    buttonPressed(label);
+  };
+
   return (
     <Container
       doubleWidth={doubleWidth}
       isBorderRight={isBorderRight}
       activeOpacity={0.7}
       type={type}
-      onPress={() => {}}
+      onPress={handleButton}
       {...rest}>
       <Title>{label}</Title>
     </Container>
