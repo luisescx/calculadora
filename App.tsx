@@ -6,7 +6,6 @@ import theme from './src/theme';
 
 const App = () => {
   return (
-    // colocar status bar
     <ThemeProvider theme={theme}>
       <Calculator />
     </ThemeProvider>
