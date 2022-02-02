@@ -11,8 +11,7 @@ interface Props {
 
 const Display: React.FC<Props> = ({calculation, result}) => {
   return (
-    <Container
-      style={{alignItems: 'flex-end', justifyContent: 'flex-end', padding: 8}}>
+    <Container>
       <TextNumber>{calculation}</TextNumber>
       <TextNumber>{result}</TextNumber>
     </Container>
