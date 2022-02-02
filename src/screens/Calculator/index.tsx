@@ -1,5 +1,4 @@
 import React, {useCallback, useState} from 'react';
-import {Alert} from 'react-native';
 import Buttons from '../../components/Buttons';
 import Display from '../../components/Display';
 
@@ -157,6 +156,7 @@ const Calculator = () => {
     },
     [firstNumberFirstEdit, operation, secondNumberFirstEdit, numbers],
   );
+
   const handleDotPressed = useCallback(
     (stringNumber: string, value: string) => {
       if (
